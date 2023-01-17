@@ -4,7 +4,7 @@ import aboutImage from "../Images/aboutus.jpg";
 function AboutUs() {
   return (
     <main className="px-10 bg-black py-10 ">
-      <h1 className="text-center text-5xl font-bold text-white mb-6">
+      <h1 className="text-center text-5xl font-bold text-white mb-8">
         About <span className="text-green-500">Us</span>
       </h1>
       <div className="flex flex-col justify-center items-center gap-8 lg:flex-row mb-10 max-w-[90%] mx-auto">
@@ -24,7 +24,7 @@ function AboutUs() {
           <br /> <br /> Sydney College in Virginia, looked up one of the more
           obscure Latin.
         </div>
-        <div className="">
+        <div className="md:h-[25rem]">
           <img
             src={aboutImage}
             alt="AboutImage"
