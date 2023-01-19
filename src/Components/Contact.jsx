@@ -1,9 +1,13 @@
 import { LocalPhone, LocationOn, Mail } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
 
 function Contact() {
+  const [input, setInput] = useState({ name: "", email: "", text: "" });
+  const clearAll = () => {
+    setInput({ name: "", email: "", text: "" });
+  };
   return (
-    <main className="bg-black text-white py-10">
+    <main className="bg-black text-white py-10" id="contact">
       <h1 className="text-center text-5xl font-bold text-white pb-8">
         Contact <span className="text-green-500">Us</span>
       </h1>
@@ -52,6 +56,8 @@ function Contact() {
             type="text"
             placeholder="Your Name"
             className="bg-transparent text-white border-2 py-1 px-3 border-green-500 outline-none rounded placeholder-stone-400"
+            value={input.name}
+            onChange={(e) => setInput({ ...input, name: e.target.value })}
           />
           <input
             type="email"
@@ -59,6 +65,8 @@ function Contact() {
             id=""
             placeholder="E-mail"
             className="bg-transparent text-white border-2 py-1 px-3 border-green-500 outline-none rounded placeholder-stone-400"
+            value={input.email}
+            onChange={(e) => setInput({ ...input, email: e.target.value })}
           />
           <textarea
             name=""
@@ -67,8 +75,13 @@ function Contact() {
             rows="8"
             placeholder="Your Message"
             className="bg-transparent text-white border-2 py-1 px-3 border-green-500 outline-none rounded placeholder-stone-400 resize-none"
+            value={input.text}
+            onChange={(e) => setInput({ ...input, text: e.target.value })}
           ></textarea>
-          <button className="bg-green-500 py-2 text-lg transition duration-200 active:scale-95 ">
+          <button
+            className="bg-green-500 py-2 text-lg transition duration-200 active:scale-95 "
+            onClick={() => clearAll()}
+          >
             SUBMIT
           </button>
         </div>

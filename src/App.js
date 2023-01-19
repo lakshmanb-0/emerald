@@ -9,7 +9,7 @@ import Footer from './Components/Footer';
 
 function App() {
   return (
-    <div >
+    <div className='scroll-smooth'>
       <Header />
       <AboutUs />
       <Gallery />
@@ -17,6 +17,9 @@ function App() {
       <Feedback />
       <Contact />
       <Footer />
+      <div className='bg-green-500 text-center text-white py-2'>
+        Copyright &#169; 2022 By Emeralds zambia
+      </div>
     </div>
   );
 }

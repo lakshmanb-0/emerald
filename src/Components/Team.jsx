@@ -24,7 +24,7 @@ function Team() {
     },
   ];
   return (
-    <main className="bg-black py-10">
+    <main className="bg-black py-10" id="our team">
       <h1 className="text-center text-5xl font-bold text-white mb-8">
         Our <span className="text-green-500">Team</span>
       </h1>

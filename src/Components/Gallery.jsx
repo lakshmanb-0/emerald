@@ -2,15 +2,17 @@ import React from "react";
 
 function Gallery() {
   let loop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
   return (
-    <div
+    <main
       style={{
         backgroundImage: `url(${require("../Images/gallery_banner.jpg")})`,
         backgroundRepeat: "no-repeat",
       }}
       className="relative h-full w-full bg-no-repeat bg-cover "
+      id="product gallery"
     >
-      <div className=" py-10 max-w-[90rem] flex flex-col items-center justify-center mx-auto  ">
+      <section className=" py-10 max-w-[90rem] flex flex-col items-center justify-center mx-auto  ">
         <h1 className=" z-10 text-center text-5xl font-bold text-white mb-8">
           Product <span className="text-green-500">Gallery</span>
         </h1>
@@ -26,8 +28,8 @@ function Gallery() {
             />
           ))}
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

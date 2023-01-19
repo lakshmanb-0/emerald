@@ -1,41 +1,87 @@
 import {
+  Close,
   Diamond,
   DiamondOutlined,
   EngineeringOutlined,
   KeyboardArrowDown,
   LocalShippingOutlined,
 } from "@mui/icons-material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import headerBanner from "../Images/header_banner.webp";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-scroll";
 
 function Header() {
   const [hamburger, setHamburger] = useState(false);
+  const [nav, setnav] = useState(false);
+
+  // function run on resize
+  useEffect(() => {
+    let windowWidth = window.innerWidth;
+    windowWidth <= 1024 && setHamburger(true);
+    window.onresize = function () {
+      if (window.innerWidth <= 1024) {
+        setHamburger(true);
+      } else {
+        setHamburger(false);
+        setnav(false);
+      }
+    };
+  }, []);
+
+  const list = [
+    "Home",
+    "About Us",
+    "Product Gallery",
+    "Our Team",
+    "Feedback",
+    "Contact",
+  ];
 
   return (
-    <div>
+    <div id="home">
       {/* nav  */}
-      <nav className="flex items-center py-4 justify-between px-2 md:px-10 bg-green-500 text-white fixed w-full top-0 z-50 ">
+      <nav className="flex items-center py-4 justify-between px-10  bg-green-500 text-white fixed w-full top-0 z-50 ">
         <div className="flex items-center text-xl md:text-2xl">
           <Diamond fontSize="large" />
           <p className="font-bold ">
             EMERALDS <span className="font-normal">ZAMBIA</span>
           </p>
         </div>
-        <MenuIcon
-          onClick={() => setHamburger(!hamburger)}
-          className="cursor-pointer "
-        />
-        {hamburger && (
-          <ul className="flex items-center space-x-3 md:space-x-10 text-lg font-normal tracking-wider  whitespace-nowrap ">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Product Gallery</li>
-            <li>Our Team</li>
-            <li>Feedback</li>
-            <li>Contact Us</li>
-          </ul>
+        {/* menu icon  */}
+        {hamburger && !nav ? (
+          <MenuIcon
+            onClick={() => setnav(!nav)}
+            className="cursor-pointer flex"
+          />
+        ) : (
+          ""
         )}
+        {/* close icon  */}
+        {nav && (
+          <Close onClick={() => setnav(!nav)} className="cursor-pointer flex" />
+        )}
+        <ul
+          className={
+            nav
+              ? `absolute flex flex-col bg-green-500 top-[4.5rem] right-2 space-y-2 p-3 text-md tracking-wider whitespace-nowrap`
+              : `hidden lg:flex items-center md:space-x-8 text-lg font-normal tracking-wider whitespace-nowrap`
+          }
+        >
+          {list.map((item) => (
+            <Link
+              key={item}
+              to={item.toLowerCase()}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="font-semibold  hover:text-green-900"
+            >
+              {item}
+            </Link>
+          ))}
+        </ul>
       </nav>
 
       <img
@@ -44,6 +90,7 @@ function Header() {
         className="h-screen w-full relative z-90 object-cover select-none"
       />
       <div className="bg-black/60 absolute top-0 left-0 w-full h-screen" />
+
       {/* header  */}
       <header className=" flex flex-col justify-center items-center z-20 absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%]  h-full w-full ">
         <h1 className="  text-green-500 font-bold text-6xl mb-2 text-center">
@@ -53,21 +100,39 @@ function Header() {
           We supply rough Emeralds directly from the Mines
         </h6>
         <button className="bg-green-500 px-4 py-2 rounded-md mt-10 font-medium">
-          Contact Us
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Contact Us
+          </Link>
         </button>
       </header>
 
       {/* arrow  */}
-      <div className="absolute bottom-10 left-[50%] -translate-x-[50%] text-green-500 z-20 cursor-pointer hover:scale-125 transition duration-100 ease-in ">
+      <Link
+        to="priorities"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}
+        className="absolute bottom-10 left-[50%] -translate-x-[50%] text-green-500 z-20 cursor-pointer hover:scale-125 transition duration-100 ease-in "
+      >
         <KeyboardArrowDown sx={{ fontSize: 60 }} />
-      </div>
+      </Link>
 
-      {/* our Priorities  */}
-      <section className="bg-stone-900 text-white px-11 py-4 text-center">
+      {/* our Priorities section */}
+      <section
+        className="bg-stone-900 text-white px-11 py-4 text-center"
+        id="priorities"
+      >
         <h1 className="font-bold text-5xl tracking-wider my-8  ">
           Our <span className="text-green-500">Priorities</span>
         </h1>
-        <main className="flex flex-col my-3 gap-10 justify-center mb-10 lg:flex-row max-w-[80rem] mx-auto">
+        <div className="flex flex-col my-3 gap-10 justify-center mb-10 lg:flex-row max-w-[80rem] mx-auto">
           <div>
             <LocalShippingOutlined
               fontSize=""
@@ -107,7 +172,7 @@ function Header() {
               remaining essentially unchanged
             </p>
           </div>
-        </main>
+        </div>
       </section>
     </div>
   );

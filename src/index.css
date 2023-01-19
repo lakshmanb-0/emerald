@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-black {
+    background-color: #121212;
+}
+
+@layer base {
+    a {
+        @apply cursor-pointer
+    }
+}

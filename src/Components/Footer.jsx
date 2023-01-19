@@ -1,10 +1,19 @@
 import { Diamond } from "@mui/icons-material";
 import React from "react";
+import { Link } from "react-scroll";
 
 function Footer() {
+  const list = [
+    "Home",
+    "About Us",
+    "Product Gallery",
+    "Our Team",
+    "Feedback",
+    "Contact",
+  ];
   return (
-    <footer className="border-t-2 border-green-500 py-5 bg-black text-stone-400">
-      <div className="max-w-[1400px] px-8">
+    <footer className="border-t-2 border-green-500 py-5 bg-black text-stone-400 ">
+      <main className="max-w-[1300px] px-10 grid sm:grid-cols-2 lg:grid-cols-4 mx-auto space-y-8 space-x-3 lg:space-y-0">
         <section>
           <div className="text-white flex items-center space-x-1">
             <Diamond fontSize="large" />
@@ -18,26 +27,45 @@ function Footer() {
             hic porro, autem distinctio rerum voluptas ducimus ipsum?
           </p>
         </section>
-        <section className="py-10">
+        <section className="sm:py-0 ">
           <h6 className="border-l-2 border-green-500 px-2 mb-3">Short Links</h6>
-          <ul className="text-green-500 space-y-1 pl-2">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Product Gallery</li>
-            <li>Our Team</li>
-            <li>Feedback</li>
-            <li>Contact Us</li>
+          <ul className="text-green-500 space-y-1 pl-2 flex flex-col">
+            {list.map((item) => (
+              <Link
+                key={item}
+                to={item.toLowerCase()}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                className=" text-gray-200 font-semibold hover:text-green-500"
+              >
+                {item}
+              </Link>
+            ))}
           </ul>
         </section>
-        <section>
-          <h6>Gallery</h6>
-          <div className="flex items-center">
-            <img src={`${require("../Images/footer_1.jpg")}`} alt="" />
-            <img src={`${require("../Images/footer_2.jpg")}`} alt="" />
-            <img src={`${require("../Images/footer_3.jpg")}`} alt="" />
+        <section className="lg:col-span-2  ">
+          <h6 className="border-l-2 border-green-500 px-2 mb-3">Gallery</h6>
+          <div className="flex flex-col items-center space-x-3 py-2 sm:flex-row w-[10rem]">
+            <img
+              className="w-full h-[8rem] my-3 object-cover rounded-md"
+              src={`${require("../Images/footer_1.jpg")}`}
+              alt=""
+            />
+            <img
+              className="w-full h-[8rem] my-3 object-cover rounded-md"
+              src={`${require("../Images/footer_2.jpg")}`}
+              alt=""
+            />
+            <img
+              className="w-full h-[8rem] my-3 object-cover rounded-md"
+              src={`${require("../Images/footer_3.jpg")}`}
+              alt=""
+            />
           </div>
         </section>
-      </div>
+      </main>
     </footer>
   );
 }

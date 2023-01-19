@@ -3,7 +3,7 @@ import aboutImage from "../Images/aboutus.jpg";
 
 function AboutUs() {
   return (
-    <main className="px-10 bg-black py-10 ">
+    <main className="px-10 bg-black py-10 " id="about us">
       <h1 className="text-center text-5xl font-bold text-white mb-8">
         About <span className="text-green-500">Us</span>
       </h1>
