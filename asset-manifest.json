@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/emerald/static/css/main.761f5d6d.css",
+    "main.js": "/emerald/static/js/main.7d8352b6.js",
+    "static/media/gallery_banner.jpg": "/emerald/static/media/gallery_banner.bb5afa2a2129569356c9.jpg",
+    "static/media/fed_2.jpg": "/emerald/static/media/fed_2.77ea786da39f1997c434.jpg",
+    "static/media/gallery_7.jpg": "/emerald/static/media/gallery_7.741166c181e89fa2d654.jpg",
+    "static/media/gallery_4.jpg": "/emerald/static/media/gallery_4.ea6498da44f41aaa7855.jpg",
+    "static/media/header_banner.webp": "/emerald/static/media/header_banner.f289cc537dcf84d99f4d.webp",
+    "static/media/person_4.jpg": "/emerald/static/media/person_4.ffa717553cc94ff9ff96.jpg",
+    "static/media/gallery_6.jpg": "/emerald/static/media/gallery_6.d750bd705810b336c093.jpg",
+    "static/media/person_2.jpg": "/emerald/static/media/person_2.9e7b6f5729fe39d1dbb7.jpg",
+    "static/media/person_1.jpg": "/emerald/static/media/person_1.4a0a9c50e51229384f86.jpg",
+    "static/media/fed_1.jpg": "/emerald/static/media/fed_1.a4ef69646f515e0fd025.jpg",
+    "static/media/aboutus.jpg": "/emerald/static/media/aboutus.c1d592cea747ec7818f6.jpg",
+    "static/media/gallery_10.jpg": "/emerald/static/media/gallery_10.2c910be051c7c6bd321d.jpg",
+    "static/media/footer_2.jpg": "/emerald/static/media/footer_2.8994de54ad8d0b6d27dd.jpg",
+    "static/media/fed_banner.jpg": "/emerald/static/media/fed_banner.8b4202e79ce028239460.jpg",
+    "static/media/gallery_3.jpg": "/emerald/static/media/gallery_3.f609bb180c4dba95f905.jpg",
+    "static/media/gallery_2.jpg": "/emerald/static/media/gallery_2.329881307a57f5ccc54e.jpg",
+    "static/media/gallery_5.jpg": "/emerald/static/media/gallery_5.8dc00461b9f1758d1254.jpg",
+    "static/media/fed_3.jpg": "/emerald/static/media/fed_3.b640e01b2ff29f0d52fc.jpg",
+    "static/media/person_3.jpg": "/emerald/static/media/person_3.bdb5a5e373b594edb39b.jpg",
+    "static/media/gallery_1.jpg": "/emerald/static/media/gallery_1.89e9efa4aa3f71196564.jpg",
+    "static/media/gallery_8.jpg": "/emerald/static/media/gallery_8.ada03b2311b79b7457ab.jpg",
+    "static/media/gallery_9.jpg": "/emerald/static/media/gallery_9.78e30b217a249f355f87.jpg",
+    "static/media/footer_1.jpg": "/emerald/static/media/footer_1.f9f63c35eeb90a52e0ba.jpg",
+    "index.html": "/emerald/index.html",
+    "main.761f5d6d.css.map": "/emerald/static/css/main.761f5d6d.css.map",
+    "main.7d8352b6.js.map": "/emerald/static/js/main.7d8352b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.761f5d6d.css",
+    "static/js/main.7d8352b6.js"
+  ]
+}
