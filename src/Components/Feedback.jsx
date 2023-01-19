@@ -37,7 +37,7 @@ function Feedback() {
       className=" text-white py-10"
       id="feedback"
     >
-      <h1 className="text-center text-5xl font-bold text-white pb-8">
+      <h1 className="section_headings">
         Client <span className="text-green-500">Feedback</span>
       </h1>
       <section className="max-w-[1400px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 ">

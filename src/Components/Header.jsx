@@ -129,7 +129,7 @@ function Header() {
         className="bg-stone-900 text-white px-11 py-4 text-center"
         id="priorities"
       >
-        <h1 className="font-bold text-5xl tracking-wider my-8  ">
+        <h1 className="section_headings ">
           Our <span className="text-green-500">Priorities</span>
         </h1>
         <div className="flex flex-col my-3 gap-10 justify-center mb-10 lg:flex-row max-w-[80rem] mx-auto">

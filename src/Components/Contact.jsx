@@ -8,7 +8,7 @@ function Contact() {
   };
   return (
     <main className="bg-black text-white py-10" id="contact">
-      <h1 className="text-center text-5xl font-bold text-white pb-8">
+      <h1 className="section_headings">
         Contact <span className="text-green-500">Us</span>
       </h1>
       <section className="px-9 grid lg:grid-cols-2 mx-auto max-w-7xl gap-8">

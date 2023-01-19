@@ -49,17 +49,17 @@ function Footer() {
           <h6 className="border-l-2 border-green-500 px-2 mb-3">Gallery</h6>
           <div className="flex flex-col items-center space-x-3 py-2 sm:flex-row w-[10rem]">
             <img
-              className="w-full h-[8rem] my-3 object-cover rounded-md"
+              className="footer_img"
               src={`${require("../Images/footer_1.jpg")}`}
               alt=""
             />
             <img
-              className="w-full h-[8rem] my-3 object-cover rounded-md"
+              className="footer_img"
               src={`${require("../Images/footer_2.jpg")}`}
               alt=""
             />
             <img
-              className="w-full h-[8rem] my-3 object-cover rounded-md"
+              className="footer_img"
               src={`${require("../Images/footer_3.jpg")}`}
               alt=""
             />

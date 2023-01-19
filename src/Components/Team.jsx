@@ -25,10 +25,10 @@ function Team() {
   ];
   return (
     <main className="bg-black py-10" id="our team">
-      <h1 className="text-center text-5xl font-bold text-white mb-8">
+      <h1 className="section_headings">
         Our <span className="text-green-500">Team</span>
       </h1>
-      <section className="grid sm:grid-cols-2 lg:grid-cols-4 max-w-[1400px] mx-auto ">
+      <section className="grid sm:grid-cols-2 lg:grid-cols-4 max-w-[1400px] mx-auto">
         {data.map((item) => (
           <div
             key={item.id}
@@ -44,20 +44,21 @@ function Team() {
               {item.title}
             </h1>
             <p className=" text-xl text-gray-200 mx-2">MUA</p>
+
             <section className="flex items-center space-x-4">
-              <div className="p-2 border-2 cursor-pointer rounded-full border-green-500 flex mt-3">
+              <div className="team_div">
                 <Instagram
                   className="text-white h-4 "
                   sx={{ fontSize: "1.5rem" }}
                 />
               </div>
-              <div className="p-2 border-2 cursor-pointer rounded-full border-green-500 flex mt-3">
+              <div className="team_div">
                 <Twitter
                   className="text-white h-4 "
                   sx={{ fontSize: "1.5rem" }}
                 />
               </div>
-              <div className="p-2 border-2 cursor-pointer rounded-full border-green-500 flex mt-3">
+              <div className="team_div">
                 <Reddit
                   className="text-white h-4 "
                   sx={{ fontSize: "1.5rem" }}

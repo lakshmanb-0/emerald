@@ -8,6 +8,24 @@
 
 @layer base {
     a {
-        @apply cursor-pointer
+        @apply cursor-pointer;
+    }
+}
+
+@layer components {
+    .team_div {
+        @apply p-2 border-2 cursor-pointer rounded-full border-green-500 flex mt-3;
+    }
+
+    .footer_img {
+        @apply w-full h-[8rem] my-3 object-cover rounded-md;
+    }
+
+    .section_headings {
+        @apply text-center text-5xl font-bold text-white pb-8;
+    }
+
+    .about_div {
+        @apply bg-green-500 flex flex-col items-center rounded px-3 py-2 mb-8;
     }
 }

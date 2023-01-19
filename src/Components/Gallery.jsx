@@ -13,7 +13,7 @@ function Gallery() {
       id="product gallery"
     >
       <section className=" py-10 max-w-[90rem] flex flex-col items-center justify-center mx-auto  ">
-        <h1 className=" z-10 text-center text-5xl font-bold text-white mb-8">
+        <h1 className="section_headings">
           Product <span className="text-green-500">Gallery</span>
         </h1>
         <div className=" z-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-8  ">
